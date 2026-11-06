@@ -13,7 +13,7 @@
         body { font-family: 'Poppins', sans-serif; }
         
         /* Paleta Neutra y Cálida */
-        .bg-neutral-dark { background-color: #1c1917; } /* Warm Stone Dark */
+        .bg-neutral-dark { background-color: #1c1917; }
         .bg-neutral-card { background-color: rgba(44, 36, 32, 0.92); }
 
         .title-gradient-warm {
@@ -153,4 +153,68 @@
         <section id="survey-section" class="hidden max-w-3xl w-full">
             <div class="bg-neutral-card border-2 border-amber-500/40 rounded-3xl p-6 md:p-8 shadow-2xl backdrop-blur-xl">
                 <div class="text-center mb-6">
-                    <h2
+                    <h2 class="text-2xl font-black text-amber-300 drop-shadow-sm">Registro de Opinión & Ubicaciones</h2>
+                    <p class="text-xs text-stone-300 mt-1">Ingreso exclusivo para personas mayores de edad (+18 años)</p>
+                </div>
+
+                <!-- ALERTA DE MENOR DE EDAD -->
+                <div id="age-error" class="hidden mb-6 p-4 bg-red-900/60 border border-red-500 text-red-200 text-xs rounded-2xl flex items-center gap-3">
+                    <i data-lucide="alert-triangle" class="w-6 h-6 text-red-400 flex-shrink-0"></i>
+                    <span><strong>Acceso restringido:</strong> Debes ser mayor de 18 años para participar en esta encuesta.</span>
+                </div>
+
+                <form id="survey-form" class="space-y-6">
+                    
+                    <!-- Datos de usuario básicos -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Nombre o Alias</label>
+                            <input type="text" id="user-name" required placeholder="Ej. Alex M." 
+                                class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Identificación de Género</label>
+                            <select id="user-gender" class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                                <option value="Hombre">Hombre</option>
+                                <option value="Mujer">Mujer</option>
+                                <option value="No binario / Otro">No binario / Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- FECHA DE NACIMIENTO Y EDAD (+18) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-stone-900/40 p-4 border border-amber-500/30 rounded-2xl">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Fecha de Nacimiento</label>
+                            <input type="date" id="user-birthdate" required 
+                                class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Edad Cumplida</label>
+                            <input type="number" id="user-age" required min="18" max="99" placeholder="Ej. 24" 
+                                class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                        </div>
+                    </div>
+
+                    <!-- ZONA Y MOTEL EN QUITO -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-amber-300 mb-1">1. Sector / Ubicación en Quito</label>
+                            <select id="user-zone" class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                                <option value="Norte de Quito (Carcelén / Galo Plaza Lasso)">Norte de Quito (Carcelén / Galo Plaza Lasso)</option>
+                                <option value="Sur de Quito (Maldonado / Quitumbe)">Sur de Quito (Maldonado / Quitumbe)</option>
+                                <option value="Valles (Los Chillos / Tumbaco / Cumbayá)">Valles (Los Chillos / Tumbaco / Cumbayá)</option>
+                                <option value="Centro / Bartolomé Sánchez">Centro / Bartolomé Sánchez</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-amber-300 mb-1">2. Motel Favorito o Recomendado</label>
+                            <select id="user-motel" class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                                <option value="Liv Motel - Antes Lumini (Av. Galo Plaza Lasso N72-93)">Liv Motel (Antes Lumini) - Av. Galo Plaza Lasso N72-93</option>
+                                <option value="Tantra Love Hotel - Platinum/Design (Bartolomé Sánchez)">Tantra Love Hotel - Bartolomé Sánchez y Joaquín Mancheno</option>
+                                <option value="Amelie VIP Motel (Calle N E1-172 y Galo Plaza Lasso)">Amelie VIP Motel - Calle N E1-172 y Galo Plaza Lasso</option>
+                                <option value="Motel Gaviota Azul (Carcelén Industrial - Anasayas N72-02)">Motel Gaviota Azul - Carcelén Industrial</option>
+                                <option value="Sensus / Venecia (Carcelén Norte)">Sensus / Venecia (Carcelén Norte)</option>
+                                <option value="Sensus / Black Suites (Carcelén Norte)">Sensus / Black Suites (Carcelén Norte)</option>
+                                <option value="Sensus /
