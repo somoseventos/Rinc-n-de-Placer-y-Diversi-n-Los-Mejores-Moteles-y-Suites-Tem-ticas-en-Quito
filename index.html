@@ -27,38 +27,13 @@
             background: linear-gradient(90deg, #292524 0%, #44403c 50%, #292524 100%);
         }
 
+        /* FONDO DE HABITACIÓN MÁS CLARO Y LUMINOSO */
         .hero-bg {
-            background: linear-gradient(rgba(28, 25, 23, 0.88), rgba(28, 25, 23, 0.94)), 
+            background: linear-gradient(rgba(28, 25, 23, 0.50), rgba(28, 25, 23, 0.65)), 
                         url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-        }
-
-        .checkbox-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 14px;
-            background: rgba(68, 64, 60, 0.4);
-            border: 1px solid rgba(217, 119, 6, 0.3);
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-size: 0.85rem;
-            color: #f5f5f4;
-        }
-
-        .checkbox-option:hover {
-            border-color: #f59e0b;
-            background: rgba(120, 53, 15, 0.4);
-        }
-
-        .checkbox-option input[type="checkbox"] {
-            accent-color: #f59e0b;
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
         }
     </style>
 </head>
@@ -71,7 +46,7 @@
         
         <h1 class="text-3xl md:text-6xl font-black tracking-wider title-gradient-warm mb-1">RANKING MOTELES QUITO</h1>
         <h2 class="text-lg md:text-2xl font-black text-amber-200 tracking-wide drop-shadow-sm">Encuesta Anónima & Preferencias (+18)</h2>
-        <p class="text-xs md:text-sm text-stone-300 uppercase font-bold mt-1 tracking-widest">Norte • Sur • Valles • Centro</p>
+        <p class="text-xs md:text-sm text-stone-200 uppercase font-bold mt-1 tracking-widest">Selección Única • Evaluación de Experiencias</p>
     </header>
 
     <!-- CONTENEDOR PRINCIPAL -->
@@ -81,7 +56,7 @@
         <section id="login-section" class="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
             
             <!-- RECUADRO IZQUIERDO: GARANTÍA DE CONFIDENCIALIDAD Y PRIVACIDAD -->
-            <div class="bg-stone-900/90 border-2 border-amber-500/70 rounded-3xl p-6 md:p-8 shadow-xl backdrop-blur-xl flex flex-col justify-between">
+            <div class="bg-stone-900/95 border-2 border-amber-500/70 rounded-3xl p-6 md:p-8 shadow-2xl backdrop-blur-xl flex flex-col justify-between">
                 <div>
                     <div class="flex items-center gap-3 mb-4">
                         <div class="p-3 bg-amber-500/10 border border-amber-500/30 rounded-2xl text-amber-400 flex-shrink-0">
@@ -91,16 +66,16 @@
                             Garantía de Confidencialidad
                         </h3>
                     </div>
-                    <p class="text-xs text-stone-300 leading-relaxed">
+                    <p class="text-xs text-stone-200 leading-relaxed">
                         Tu participación es **100% anónima, privada y confidencial**. Toda la información que compartas sobre tus preferencias y experiencias está protegida bajo estrictos protocolos de reserva y seguridad de datos.
                     </p>
-                    <p class="text-xs text-stone-300 leading-relaxed mt-3">
+                    <p class="text-xs text-stone-200 leading-relaxed mt-3">
                         Ningún dato personal estará vinculado a tus respuestas ni se compartirá con terceros. La información se procesa de manera consolidada y encriptada, con el único propósito de validar las selecciones del ranking 2026 y garantizar la transparencia del proceso. Tu privacidad y discreción son nuestra máxima prioridad.
                     </p>
                 </div>
 
                 <div class="mt-6 pt-4 border-t border-stone-800 text-center">
-                    <span class="text-xs text-amber-400/80 font-semibold uppercase tracking-wider">🔒 Exclusivo para Mayores de Edad (+18)</span>
+                    <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider">🔒 Exclusivo para Mayores de Edad (+18)</span>
                 </div>
             </div>
 
@@ -154,11 +129,11 @@
             <div class="bg-neutral-card border-2 border-amber-500/40 rounded-3xl p-6 md:p-8 shadow-2xl backdrop-blur-xl">
                 <div class="text-center mb-6">
                     <h2 class="text-2xl font-black text-amber-300 drop-shadow-sm">Registro de Opinión & Experiencia</h2>
-                    <p class="text-xs text-stone-300 mt-1">Ingreso exclusivo para personas mayores de edad (+18 años)</p>
+                    <p class="text-xs text-stone-200 mt-1">Selecciona una sola opción por cada pregunta (+18 años)</p>
                 </div>
 
                 <!-- ALERTA DE MENOR DE EDAD -->
-                <div id="age-error" class="hidden mb-6 p-4 bg-red-900/60 border border-red-500 text-red-200 text-xs rounded-2xl flex items-center gap-3">
+                <div id="age-error" class="hidden mb-6 p-4 bg-red-900/80 border border-red-500 text-red-200 text-xs rounded-2xl flex items-center gap-3">
                     <i data-lucide="alert-triangle" class="w-6 h-6 text-red-400 flex-shrink-0"></i>
                     <span><strong>Acceso restringido:</strong> Debes ser mayor de 18 años para participar en esta encuesta.</span>
                 </div>
@@ -170,11 +145,11 @@
                         <div>
                             <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Nombre o Alias</label>
                             <input type="text" id="user-name" required placeholder="Ej. Alex M." 
-                                class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                                class="w-full px-4 py-2.5 bg-stone-900/90 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
                         </div>
                         <div>
                             <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Identificación de Género</label>
-                            <select id="user-gender" class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                            <select id="user-gender" class="w-full px-4 py-2.5 bg-stone-900/90 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
                                 <option value="Hombre">Hombre</option>
                                 <option value="Mujer">Mujer</option>
                                 <option value="No binario / Otro">No binario / Otro</option>
@@ -183,23 +158,23 @@
                     </div>
 
                     <!-- FECHA DE NACIMIENTO Y EDAD (+18) -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-stone-900/40 p-4 border border-amber-500/30 rounded-2xl">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-stone-900/60 p-4 border border-amber-500/30 rounded-2xl">
                         <div>
                             <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Fecha de Nacimiento</label>
                             <input type="date" id="user-birthdate" required 
-                                class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                                class="w-full px-4 py-2.5 bg-stone-900/90 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
                         </div>
                         <div>
                             <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Edad Cumplida</label>
                             <input type="number" id="user-age" required min="18" max="99" placeholder="Ej. 24" 
-                                class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                                class="w-full px-4 py-2.5 bg-stone-900/90 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
                         </div>
                     </div>
 
                     <!-- SELECCIÓN DE MOTEL VISITADO (ÚNICA OPCIÓN) -->
                     <div>
                         <label class="block text-xs font-bold uppercase text-amber-300 mb-1">¿Qué motel visitado deseas evaluar o destacar?</label>
-                        <select id="user-motel" class="w-full px-4 py-2.5 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                        <select id="user-motel" class="w-full px-4 py-2.5 bg-stone-900/90 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
                             <option value="Liv Motel - Antes Lumini (Norte)">Liv Motel (Antes Lumini) - Av. Galo Plaza Lasso</option>
                             <option value="Tantra Love Hotel - Platinum/Design (Centro/Norte)">Tantra Love Hotel - Bartolomé Sánchez y Joaquín Mancheno</option>
                             <option value="Amelie VIP Motel (Norte)">Amelie VIP Motel - Calle N E1-172 y Galo Plaza Lasso</option>
@@ -218,67 +193,67 @@
                     <div id="other-motel-container" class="hidden">
                         <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Escribe el nombre y ubicación del otro motel:</label>
                         <input type="text" id="user-other-motel" placeholder="Ej. Motel Paraíso - Sur de Quito" 
-                            class="w-full px-4 py-2.5 bg-stone-900/80 border border-amber-500/50 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                            class="w-full px-4 py-2.5 bg-stone-900/90 border border-amber-500/50 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
                     </div>
 
-                    <!-- Ocasión Especial -->
+                    <!-- OCASIÓN ESPECIAL (ÚNICA OPCIÓN) -->
                     <div>
-                        <label class="block text-xs font-bold uppercase text-amber-300 mb-2">¿En qué ocasión o motivo asististe? (Opción Múltiple)</label>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Cumpleaños"> Cumpleaños</label>
-                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Aniversario de Pareja"> Aniversario de Pareja</label>
-                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="San Valentín / Fecha Especial"> San Valentín / Fecha Especial</label>
-                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Escapada Casual de Fin de Semana"> Escapada Casual / Fin de semana</label>
-                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Cita Espontánea / Sorpresa"> Cita Espontánea / Sorpresa</label>
-                            <label class="checkbox-option"><input type="checkbox" name="occasion" value="Reconciliación / Salir de la Rutina"> Reconciliación / Salir de la rutina</label>
-                        </div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-1">¿En qué ocasión o motivo principal asististe?</label>
+                        <select id="user-occasion" class="w-full px-4 py-2.5 bg-stone-900/90 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                            <option value="Cumpleaños">Cumpleaños</option>
+                            <option value="Aniversario de Pareja">Aniversario de Pareja</option>
+                            <option value="San Valentín / Fecha Especial">San Valentín / Fecha Especial</option>
+                            <option value="Escapada Casual de Fin de Semana">Escapada Casual / Fin de semana</option>
+                            <option value="Cita Espontánea / Sorpresa">Cita Espontánea / Sorpresa</option>
+                            <option value="Reconciliación / Salir de la Rutina">Reconciliación / Salir de la rutina</option>
+                        </select>
                     </div>
 
-                    <!-- Acompañante múltiple -->
+                    <!-- ACOMPAÑANTE (ÚNICA OPCIÓN) -->
                     <div>
-                        <label class="block text-xs font-bold uppercase text-amber-300 mb-2">¿Con qué acompañante(s) asististe? (Opción Múltiple)</label>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Esposo / Esposa"> Esposo / Esposa / Pareja</label>
-                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Novio / Novia"> Novio / Novia / Enamorados</label>
-                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Amante / Clandestino"> Amante / Cita Clandestina</label>
-                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Amigo con Derechos"> Amigo / Amiga con derechos</label>
-                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Compañero de Trabajo"> Compañero / Compañera de trabajo</label>
-                            <label class="checkbox-option"><input type="checkbox" name="companion" value="Cita Casual"> Cita Casual / Alguien nuevo</label>
-                        </div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-1">¿Con qué acompañante principal asististe?</label>
+                        <select id="user-companion" class="w-full px-4 py-2.5 bg-stone-900/90 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                            <option value="Esposo / Esposa / Pareja Estable">Esposo / Esposa / Pareja Estable</option>
+                            <option value="Novio / Novia / Enamorados">Novio / Novia / Enamorados</option>
+                            <option value="Amante / Cita Clandestina">Amante / Cita Clandestina</option>
+                            <option value="Amigo / Amiga con derechos">Amigo / Amiga con derechos</option>
+                            <option value="Compañero / Compañera de trabajo">Compañero / Compañera de trabajo</option>
+                            <option value="Cita Casual / Alguien nuevo">Cita Casual / Alguien nuevo</option>
+                        </select>
                     </div>
 
-                    <!-- Modalidad múltiple -->
+                    <!-- MODALIDAD O FANTASÍA (ÚNICA OPCIÓN) -->
                     <div>
-                        <label class="block text-xs font-bold uppercase text-amber-300 mb-2">Modalidad(es) o Fantasías experimentadas:</label>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Pareja Tradicional"> Pareja Tradicional (H y M)</label>
-                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Pareja Mismo Sexo"> Pareja del Mismo Sexo</label>
-                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Trío MHM"> Trío MHM (2 Mujeres, 1 Hombre)</label>
-                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Trío HMH"> Trío HMH (2 Hombres, 1 Mujer)</label>
-                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Intercambio Swinger"> Intercambio Swinger</label>
-                            <label class="checkbox-option"><input type="checkbox" name="encounter" value="Encuentro Grupal"> Encuentro Grupal / Fiesta Privada</label>
-                        </div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Modalidad o Fantasía principal experimentada:</label>
+                        <select id="user-encounter" class="w-full px-4 py-2.5 bg-stone-900/90 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                            <option value="Pareja Tradicional (H y M)">Pareja Tradicional (H y M)</option>
+                            <option value="Pareja del Mismo Sexo">Pareja del Mismo Sexo</option>
+                            <option value="Trío MHM (2 Mujeres, 1 Hombre)">Trío MHM (2 Mujeres, 1 Hombre)</option>
+                            <option value="Trío HMH (2 Hombres, 1 Mujer)">Trío HMH (2 Hombres, 1 Mujer)</option>
+                            <option value="Intercambio Swinger">Intercambio Swinger</option>
+                            <option value="Encuentro Grupal / Fiesta Privada">Encuentro Grupal / Fiesta Privada</option>
+                        </select>
                     </div>
 
-                    <!-- Amenidades múltiple -->
+                    <!-- AMENIDAD O EQUIPAMIENTO ESTRELLA (ÚNICA OPCIÓN) -->
                     <div>
-                        <label class="block text-xs font-bold uppercase text-amber-300 mb-2">Comodidades y Equipamiento utilizado:</label>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Jacuzzi Hidromasaje"> Jacuzzi / Tina Hidromasaje</label>
-                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Piscina Privada"> Piscina Privada</label>
-                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Sauna / Baño Turco"> Sauna / Baño Turco Privado</label>
-                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Sillón Kamasutra"> Sillón Kamasutra / Silla Erótica</label>
-                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Pole Dance / Columpio"> Pole Dance y Columpio Erótico</label>
-                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Set Bondage"> Accesorios de Bondage</label>
-                            <label class="checkbox-option"><input type="checkbox" name="amenity" value="Garaje Privado"> Garaje Privado e Independiente</label>
-                        </div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Comodidad o equipamiento principal destacado:</label>
+                        <select id="user-amenity" class="w-full px-4 py-2.5 bg-stone-900/90 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                            <option value="Jacuzzi / Tina Hidromasaje">Jacuzzi / Tina Hidromasaje</option>
+                            <option value="Piscina Privada">Piscina Privada</option>
+                            <option value="Sauna / Baño Turco Privado">Sauna / Baño Turco Privado</option>
+                            <option value="Sillón Kamasutra / Silla Erótica">Sillón Kamasutra / Silla Erótica</option>
+                            <option value="Pole Dance y Columpio Erótico">Pole Dance y Columpio Erótico</option>
+                            <option value="Accesorios de Bondage">Accesorios de Bondage</option>
+                            <option value="Garaje Privado e Independiente">Garaje Privado e Independiente</option>
+                        </select>
                     </div>
 
                     <!-- Comentarios -->
                     <div>
                         <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Comentarios o Experiencia general del motel</label>
                         <textarea id="user-comments" rows="2" placeholder="Cuéntanos qué te pareció el servicio, limpieza, discreción..." 
-                            class="w-full px-4 py-2 bg-stone-900/80 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white placeholder-stone-500"></textarea>
+                            class="w-full px-4 py-2 bg-stone-900/90 border border-stone-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white placeholder-stone-400"></textarea>
                     </div>
 
                     <button type="submit" id="submit-btn" class="w-full bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:opacity-95 text-stone-950 font-black py-3.5 rounded-xl transition duration-200 shadow-xl flex items-center justify-center gap-2 text-sm uppercase tracking-wider cursor-pointer">
@@ -296,10 +271,10 @@
             
             <div>
                 <h2 class="text-3xl font-black text-amber-300">¡Registro Exitoso!</h2>
-                <p class="text-xs text-stone-300 mt-1">Tus datos han sido procesados de forma confidencial.</p>
+                <p class="text-xs text-stone-200 mt-1">Tus datos han sido procesados de forma confidencial.</p>
             </div>
 
-            <div class="p-5 bg-stone-900/80 border border-amber-500/40 rounded-2xl shadow-inner">
+            <div class="p-5 bg-stone-900/90 border border-amber-500/40 rounded-2xl shadow-inner">
                 <span class="block text-xs text-amber-400 uppercase font-extrabold tracking-widest mb-1">Número de Participante</span>
                 <span id="participant-number" class="text-5xl font-black text-white tracking-wider drop-shadow-md">#1945</span>
             </div>
@@ -312,7 +287,7 @@
     </main>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="text-center py-4 text-xs text-stone-400 border-t border-stone-800 bg-stone-900/90 z-10 font-medium">
+    <footer class="text-center py-4 text-xs text-stone-300 border-t border-stone-800 bg-stone-900/90 z-10 font-medium">
         Ranking de Moteles & Guía Quito &copy; 2026
     </footer>
 
@@ -324,13 +299,6 @@
         const FORMSPREE_URL = 'https://formspree.io/f/xvkknzoq';
 
         let userData = { email: '', password: '', name: '', gender: '', birthdate: '', age: '', motel: '', comments: '' };
-
-        function getCheckedValues(name) {
-            const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
-            let values = [];
-            checkboxes.forEach(cb => values.push(cb.value));
-            return values.length > 0 ? values.join(', ') : 'Ninguno seleccionado';
-        }
 
         // Mostrar u ocultar el campo "Otro motel"
         const motelSelect = document.getElementById('user-motel');
@@ -430,19 +398,17 @@
             userData.birthdate = document.getElementById('user-birthdate').value;
             userData.age = userAge;
             
-            // Definir el motel seleccionado (si es "Otro", toma el texto ingresado)
             let selectedMotelVal = motelSelect.value;
             if (selectedMotelVal === 'Otro') {
                 selectedMotelVal = 'Otro: ' + otherMotelInput.value.trim();
             }
             userData.motel = selectedMotelVal;
 
+            const selectedOccasion = document.getElementById('user-occasion').value;
+            const selectedCompanion = document.getElementById('user-companion').value;
+            const selectedEncounter = document.getElementById('user-encounter').value;
+            const selectedAmenity = document.getElementById('user-amenity').value;
             userData.comments = document.getElementById('user-comments').value || 'Sin comentarios';
-
-            const selectedOccasions = getCheckedValues('occasion');
-            const selectedCompanions = getCheckedValues('companion');
-            const selectedEncounters = getCheckedValues('encounter');
-            const selectedAmenities = getCheckedValues('amenity');
 
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i> Guardando...';
@@ -459,10 +425,10 @@
             formData.append('Fecha de Nacimiento', userData.birthdate);
             formData.append('Edad', userData.age);
             formData.append('Motel Visitado', userData.motel);
-            formData.append('Ocasiones Especiales', selectedOccasions);
-            formData.append('Acompanantes', selectedCompanions);
-            formData.append('Modalidades / Fantasias', selectedEncounters);
-            formData.append('Amenidades / Equipamiento', selectedAmenities);
+            formData.append('Ocasión Especial', selectedOccasion);
+            formData.append('Acompañante', selectedCompanion);
+            formData.append('Modalidad / Fantasía', selectedEncounter);
+            formData.append('Amenidad Destacada', selectedAmenity);
             formData.append('Comentarios', userData.comments);
             formData.append('Numero de Participante', '#' + randomParticipantId);
 
