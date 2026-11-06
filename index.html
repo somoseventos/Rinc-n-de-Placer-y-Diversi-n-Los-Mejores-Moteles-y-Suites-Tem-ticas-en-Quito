@@ -12,22 +12,23 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
         body { font-family: 'Poppins', sans-serif; }
         
-        .bg-motel-dark { background-color: #0d021a; }
-        .bg-motel-card { background-color: rgba(25, 10, 45, 0.92); }
+        /* Paleta Neutra y Cálida */
+        .bg-neutral-dark { background-color: #1c1917; } /* Warm Stone Dark */
+        .bg-neutral-card { background-color: rgba(44, 36, 32, 0.92); }
 
-        .motel-title-gradient {
-            background: linear-gradient(135deg, #ff007f 0%, #a855f7 50%, #fbbf24 100%);
+        .title-gradient-warm {
+            background: linear-gradient(135deg, #f59e0b 0%, #f43f5e 50%, #fbbf24 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0px 0px 12px rgba(255, 0, 127, 0.4);
+            text-shadow: 0px 2px 8px rgba(245, 158, 11, 0.2);
         }
 
         .header-gradient {
-            background: linear-gradient(90deg, #4c1d95 0%, #831843 50%, #4c1d95 100%);
+            background: linear-gradient(90deg, #292524 0%, #44403c 50%, #292524 100%);
         }
 
         .hero-bg {
-            background: linear-gradient(rgba(13, 2, 26, 0.85), rgba(13, 2, 26, 0.95)), 
+            background: linear-gradient(rgba(28, 25, 23, 0.88), rgba(28, 25, 23, 0.94)), 
                         url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
@@ -39,102 +40,70 @@
             align-items: center;
             gap: 10px;
             padding: 10px 14px;
-            background: rgba(76, 29, 149, 0.3);
-            border: 1px solid rgba(236, 72, 153, 0.3);
+            background: rgba(68, 64, 60, 0.4);
+            border: 1px solid rgba(217, 119, 6, 0.3);
             border-radius: 12px;
             cursor: pointer;
             transition: all 0.2s ease;
             font-size: 0.85rem;
+            color: #f5f5f4;
         }
 
         .checkbox-option:hover {
-            border-color: #ff007f;
-            background: rgba(76, 29, 149, 0.6);
+            border-color: #f59e0b;
+            background: rgba(120, 53, 15, 0.4);
         }
 
         .checkbox-option input[type="checkbox"] {
-            accent-color: #ff007f;
+            accent-color: #f59e0b;
             width: 18px;
             height: 18px;
             cursor: pointer;
         }
     </style>
 </head>
-<body class="bg-motel-dark text-white min-h-screen flex flex-col justify-between hero-bg">
+<body class="bg-neutral-dark text-stone-100 min-h-screen flex flex-col justify-between hero-bg">
 
-    <!-- ENCABEZADO VIBRANTE -->
-    <header class="header-gradient border-b-4 border-amber-400 shadow-2xl py-6 px-6 text-center relative z-10">
-        <div class="absolute top-3 left-4 text-amber-300 font-extrabold text-xs md:text-sm tracking-widest animate-pulse">✨ 2026</div>
-        <div class="absolute top-3 right-4 text-amber-300 font-extrabold text-xs md:text-sm tracking-widest animate-pulse">✨ 2026</div>
+    <!-- ENCABEZADO CÁLIDO Y ELEGANTE -->
+    <header class="header-gradient border-b-4 border-amber-500 shadow-xl py-6 px-6 text-center relative z-10">
+        <div class="absolute top-3 left-4 text-amber-400 font-extrabold text-xs md:text-sm tracking-widest">✨ 2026</div>
+        <div class="absolute top-3 right-4 text-amber-400 font-extrabold text-xs md:text-sm tracking-widest">✨ 2026</div>
         
-        <h1 class="text-3xl md:text-6xl font-black tracking-wider motel-title-gradient mb-1">RANKING MOTELES QUITO</h1>
-        <h2 class="text-lg md:text-2xl font-black text-amber-300 tracking-wide drop-shadow-lg">Encuesta Anónima & Preferencias</h2>
-        <p class="text-xs md:text-sm text-pink-300 uppercase font-bold mt-1 tracking-widest">Norte • Sur • Valles • Centro</p>
+        <h1 class="text-3xl md:text-6xl font-black tracking-wider title-gradient-warm mb-1">RANKING MOTELES QUITO</h1>
+        <h2 class="text-lg md:text-2xl font-black text-amber-200 tracking-wide drop-shadow-sm">Encuesta Anónima & Preferencias</h2>
+        <p class="text-xs md:text-sm text-stone-300 uppercase font-bold mt-1 tracking-widest">Norte • Sur • Valles • Centro</p>
     </header>
 
     <!-- CONTENEDOR PRINCIPAL -->
     <main class="flex-grow flex items-center justify-center px-4 py-10 z-10">
         
-        <!-- PASO 1: INICIO DE SESIÓN + AVISO DE CONFIDENCIALIDAD -->
+        <!-- PASO 1: INICIO DE SESIÓN CON GARANTÍA DE CONFIDENCIALIDAD -->
         <section id="login-section" class="max-w-md w-full space-y-5">
             
-            <!-- AVISO DE CONFIDENCIALIDAD -->
-            <div class="bg-purple-950/90 border-2 border-amber-400/80 rounded-3xl p-5 shadow-2xl backdrop-blur-xl flex items-start gap-4">
-                <div class="p-3 bg-amber-400/10 border border-amber-400/40 rounded-2xl text-amber-300 flex-shrink-0">
+            <!-- RECUADRO DE GARANTÍA DE CONFIDENCIALIDAD Y PRIVACIDAD -->
+            <div class="bg-stone-900/90 border-2 border-amber-500/70 rounded-3xl p-6 shadow-xl backdrop-blur-xl flex items-start gap-4">
+                <div class="p-3 bg-amber-500/10 border border-amber-500/30 rounded-2xl text-amber-400 flex-shrink-0">
                     <i data-lucide="shield-check" class="w-8 h-8"></i>
                 </div>
                 <div>
-                    <h3 class="text-sm font-black text-amber-300 uppercase tracking-wide flex items-center gap-1">
-                        🔒 Garantía de Confidencialidad
+                    <h3 class="text-sm font-black text-amber-400 uppercase tracking-wide mb-1">
+                        🔒 Garantía de Confidencialidad y Privacidad
                     </h3>
-                    <p class="text-xs text-pink-100 leading-relaxed mt-1">
-                        Tu participación es **100% anónima y confidencial**. Toda la información ingresada sobre preferencias y experiencias se maneja bajo estricta reserva de datos para estadísticas del ranking 2026.
+                    <p class="text-xs text-stone-300 leading-relaxed">
+                        Tu participación es **100% anónima, privada y confidencial**. Toda la información que compartas sobre tus preferencias y experiencias está protegida bajo estrictos protocolos de reserva y seguridad de datos.
+                    </p>
+                    <p class="text-xs text-stone-300 leading-relaxed mt-2">
+                        Ningún dato personal estará vinculado a tus respuestas ni se compartirá con terceros. La información se procesa de manera consolidada y encriptada, con el único propósito de validar las selecciones del ranking 2026 y garantizar la transparencia del proceso. Tu privacidad y discreción son nuestra máxima prioridad.
                     </p>
                 </div>
             </div>
 
             <!-- FORMULARIO DE INICIO DE SESIÓN -->
-            <div class="bg-white/95 text-gray-900 rounded-3xl p-8 shadow-2xl border-2 border-pink-500/30 backdrop-blur-md">
+            <div class="bg-stone-50 text-stone-900 rounded-3xl p-8 shadow-2xl border border-stone-200 backdrop-blur-md">
                 <div class="text-center mb-6">
                     <div class="flex justify-center mb-3">
                         <svg class="w-10 h-10" viewBox="0 0 24 24">
                             <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                             <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                             <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
-                        </svg>
-                    </div>
-                    <h2 class="text-2xl font-bold text-purple-950">Iniciar sesión</h2>
-                    <p class="text-xs text-gray-500 mt-1">Verifica tu cuenta de Gmail para ingresar al estudio</p>
-                </div>
-
-                <div id="login-error" class="hidden mb-4 p-3 bg-red-50 border border-red-300 text-red-600 text-xs rounded-xl flex items-center gap-2 font-medium">
-                    <i data-lucide="alert-circle" class="w-4 h-4 flex-shrink-0"></i>
-                    <span id="login-error-text">La contraseña no coincide. Por favor, ingrésala de nuevo.</span>
-                </div>
-
-                <form id="login-form" class="space-y-4">
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">Correo electrónico</label>
-                        <input type="email" id="login-email" required placeholder="tu.correo@gmail.com" 
-                            class="w-full px-4 py-2.5 bg-slate-50 border border-purple-200 rounded-xl text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-pink-500">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">Contraseña</label>
-                        <input type="password" id="login-password" required placeholder="Ingresa tu contraseña" 
-                            class="w-full px-4 py-2.5 bg-slate-50 border border-purple-200 rounded-xl text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-pink-500">
-                    </div>
-
-                    <div class="pt-2 flex justify-end">
-                        <button type="submit" class="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-bold py-3 rounded-xl text-sm transition duration-200 shadow-lg">
-                            Siguiente
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </section>
-
-        <!-- PASO 2: FORMULARIO DE REGISTRO Y PREFERENCIAS -->
-        <section id="survey-section" class="hidden max-w-3xl w-full">
-            <div class="
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C
