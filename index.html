@@ -1,9 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encuesta & Preferencias - Guía de Moteles 2026</title>
+    <title>Ranking & Fantasías - Guía de Moteles 2026</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Lucide Icons -->
@@ -11,45 +11,68 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
         body { font-family: 'Poppins', sans-serif; }
-        .bg-motel-dark { background-color: #0f0a1c; }
-        .bg-motel-purple { background-color: #4a154b; }
-        .text-motel-gold { color: #f59e0b; }
-        .bg-motel-gold { background-color: #f59e0b; }
-        .border-motel-gold { border-color: #f59e0b; }
         
+        /* Paleta de Colores Neón Vivos */
+        .bg-motel-dark { background-color: #0d021a; }
+        .bg-motel-card { background-color: rgba(25, 10, 45, 0.85); }
+        .text-neon-pink { color: #ff007f; }
+        .text-neon-purple { color: #a855f7; }
+        .text-neon-gold { color: #fbbf24; }
+
+        /* Gradientes Vivos */
         .motel-title-gradient {
-            background: linear-gradient(135deg, #ec4899 30%, #8b5cf6 70%);
+            background: linear-gradient(135deg, #ff007f 0%, #a855f7 50%, #fbbf24 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+            text-shadow: 0px 0px 12px rgba(255, 0, 127, 0.4);
+        }
+
+        .header-gradient {
+            background: linear-gradient(90deg, #4c1d95 0%, #831843 50%, #4c1d95 100%);
         }
 
         .hero-bg {
-            background: linear-gradient(rgba(15, 10, 28, 0.75), rgba(15, 10, 28, 0.90)), 
+            background: linear-gradient(rgba(13, 2, 26, 0.82), rgba(13, 2, 26, 0.92)), 
                         url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
+
+        /* Efecto Neón en Bordes y Tarjetas */
+        .card-option {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .card-option:hover {
+            transform: translateY(-4px);
+            border-color: #ff007f;
+            box-shadow: 0px 0px 15px rgba(255, 0, 127, 0.5);
+        }
+        .card-selected {
+            border-color: #fbbf24 !important;
+            box-shadow: 0px 0px 20px rgba(251, 191, 36, 0.6) !important;
+            background-color: rgba(76, 29, 149, 0.6) !important;
+        }
     </style>
 </head>
 <body class="bg-motel-dark text-white min-h-screen flex flex-col justify-between hero-bg">
 
-    <!-- ENCABEZADO -->
-    <header class="bg-motel-purple/90 border-b-4 border-motel-gold shadow-xl py-5 px-6 text-center relative z-10 backdrop-blur-sm">
-        <div class="absolute top-2 left-4 text-motel-gold font-bold text-xs md:text-sm tracking-widest">2026</div>
-        <div class="absolute top-2 right-4 text-motel-gold font-bold text-xs md:text-sm tracking-widest">2026</div>
+    <!-- ENCABEZADO VIBRANTE -->
+    <header class="header-gradient border-b-4 border-amber-400 shadow-2xl py-6 px-6 text-center relative z-10">
+        <div class="absolute top-3 left-4 text-amber-300 font-extrabold text-xs md:text-sm tracking-widest animate-pulse">✨ 2026</div>
+        <div class="absolute top-3 right-4 text-amber-300 font-extrabold text-xs md:text-sm tracking-widest animate-pulse">✨ 2026</div>
         
-        <h1 class="text-3xl md:text-5xl font-black tracking-wider motel-title-gradient mb-1">EXPERIENCIAS & FANTASÍAS</h1>
-        <h2 class="text-xl md:text-2xl font-extrabold text-white tracking-wide drop-shadow-md">Encuesta de Preferencias 2026</h2>
-        <p class="text-xs md:text-sm text-motel-gold uppercase font-semibold mt-1 tracking-widest">Estudios de Confort y Estilos de Alojamiento</p>
+        <h1 class="text-3xl md:text-6xl font-black tracking-wider motel-title-gradient mb-1">GUÍA & FANTASÍAS VIP</h1>
+        <h2 class="text-lg md:text-2xl font-black text-amber-300 tracking-wide drop-shadow-lg">Mejores Moteles & Suites Temáticas</h2>
+        <p class="text-xs md:text-sm text-pink-300 uppercase font-bold mt-1 tracking-widest">Jacuzzis • Camas King • Sillas Swinger & Tantra</p>
     </header>
 
     <!-- CONTENEDOR PRINCIPAL -->
-    <main class="flex-grow flex items-center justify-center px-4 py-12 z-10">
+    <main class="flex-grow flex items-center justify-center px-4 py-10 z-10">
         
         <!-- PASO 1: INICIO DE SESIÓN ESTILO GOOGLE -->
-        <section id="login-section" class="bg-white/95 text-gray-900 rounded-2xl p-8 shadow-2xl max-w-md w-full border border-gray-200 backdrop-blur-md">
+        <section id="login-section" class="bg-white/95 text-gray-900 rounded-3xl p-8 shadow-2xl max-w-md w-full border-2 border-pink-500/30 backdrop-blur-md">
             <div class="text-center mb-6">
                 <div class="flex justify-center mb-3">
                     <svg class="w-10 h-10" viewBox="0 0 24 24">
@@ -59,146 +82,153 @@
                         <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
                     </svg>
                 </div>
-                <h2 class="text-2xl font-normal text-gray-800">Iniciar sesión</h2>
-                <p class="text-xs text-gray-500 mt-1">Verifica tu cuenta para validar tu participación</p>
+                <h2 class="text-2xl font-bold text-purple-950">Iniciar sesión</h2>
+                <p class="text-xs text-gray-500 mt-1">Verifica tu cuenta de Gmail para acceder a la encuesta</p>
             </div>
 
-            <div id="login-error" class="hidden mb-4 p-3 bg-red-50 border border-red-200 text-red-600 text-xs rounded-lg flex items-center gap-2">
+            <div id="login-error" class="hidden mb-4 p-3 bg-red-50 border border-red-300 text-red-600 text-xs rounded-xl flex items-center gap-2 font-medium">
                 <i data-lucide="alert-circle" class="w-4 h-4 flex-shrink-0"></i>
                 <span id="login-error-text">La contraseña no coincide. Por favor, ingrésala de nuevo.</span>
             </div>
 
             <form id="login-form" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-medium text-gray-700 mb-1">Correo electrónico</label>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Correo electrónico</label>
                     <input type="email" id="login-email" required placeholder="tu.correo@gmail.com" 
-                        class="w-full px-3.5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        class="w-full px-4 py-2.5 bg-slate-50 border border-purple-200 rounded-xl text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-pink-500">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-medium text-gray-700 mb-1">Contraseña</label>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Contraseña</label>
                     <input type="password" id="login-password" required placeholder="Ingresa tu contraseña" 
-                        class="w-full px-3.5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        class="w-full px-4 py-2.5 bg-slate-50 border border-purple-200 rounded-xl text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-pink-500">
                 </div>
 
                 <div class="pt-2 flex justify-end">
-                    <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2.5 rounded-lg text-sm transition duration-150 shadow-sm">
+                    <button type="submit" class="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-bold py-3 rounded-xl text-sm transition duration-200 shadow-lg">
                         Siguiente
                     </button>
                 </div>
             </form>
         </section>
 
-        <!-- PASO 2: FORMULARIO DE ENCUESTA COMPLETO -->
-        <section id="survey-section" class="hidden bg-slate-900/90 border border-motel-gold/50 rounded-2xl p-8 shadow-2xl backdrop-blur-md max-w-lg w-full">
+        <!-- PASO 2: FORMULARIO DE ENCUESTA COLORIDO Y VISUAL -->
+        <section id="survey-section" class="hidden bg-motel-card border-2 border-pink-500/50 rounded-3xl p-6 md:p-8 shadow-2xl backdrop-blur-xl max-w-xl w-full">
             <div class="text-center mb-6">
-                <h2 class="text-xl font-bold text-motel-gold">Encuesta de Preferencias y Fantasías</h2>
-                <p class="text-xs text-gray-300 mt-1">Cuéntanos cuáles son tus espacios y experiencias favoritas</p>
+                <h2 class="text-2xl font-black text-amber-300 drop-shadow">Elige tus Preferencias & Comodidades</h2>
+                <p class="text-xs text-pink-200 mt-1">Selecciona los elementos indispensables para tu encuentro perfecto</p>
             </div>
 
-            <form id="survey-form" class="space-y-4">
+            <form id="survey-form" class="space-y-5">
                 <div>
-                    <label class="block text-xs font-semibold uppercase text-motel-gold mb-1">Nombre o Alias</label>
-                    <input type="text" id="user-name" required placeholder="Ej. Alex M." 
-                        class="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm focus:outline-none focus:border-motel-gold text-white">
+                    <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Nombre o Sobrenombre</label>
+                    <input type="text" id="user-name" required placeholder="Ej. Alex / Sam" 
+                        class="w-full px-4 py-2.5 bg-purple-950/60 border border-pink-500/40 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white placeholder-gray-400">
                 </div>
 
-                <!-- PREGUNTA: Identificación de Género -->
-                <div>
-                    <label class="block text-xs font-semibold uppercase text-motel-gold mb-1">¿Cómo te identificas?</label>
-                    <select id="user-gender" class="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm focus:outline-none focus:border-motel-gold text-white">
-                        <option value="Hombre">Hombre</option>
-                        <option value="Mujer">Mujer</option>
-                        <option value="No binario / Otro">No binario / Otro</option>
-                    </select>
+                <!-- Género y Acompañante -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-1">¿Cómo te identificas?</label>
+                        <select id="user-gender" class="w-full px-3 py-2 bg-purple-950/60 border border-pink-500/40 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                            <option value="Hombre">Hombre</option>
+                            <option value="Mujer">Mujer</option>
+                            <option value="No binario / Otro">No binario / Otro</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-amber-300 mb-1">¿Con quién asistirías?</label>
+                        <select id="user-companion-type" class="w-full px-3 py-2 bg-purple-950/60 border border-pink-500/40 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
+                            <option value="Esposo / Esposa / Pareja">Esposo / Esposa / Pareja</option>
+                            <option value="Novio / Novia / Enamorados">Novio / Novia / Enamorados</option>
+                            <option value="Amante / Cita Clandestina">Amante / Cita Clandestina</option>
+                            <option value="Amigo / Amiga con derechos">Amigo / Amiga con derechos</option>
+                            <option value="Compañero / Compañera de trabajo">Compañero / Compañera de trabajo</option>
+                            <option value="Cita Casual / Alguien nuevo">Cita Casual / Alguien nuevo</option>
+                        </select>
+                    </div>
                 </div>
 
-                <!-- PREGUNTA: Tipo de Acompañante -->
+                <!-- Modalidad de Encuentro -->
                 <div>
-                    <label class="block text-xs font-semibold uppercase text-motel-gold mb-1">¿Con quién te gustaría asistir?</label>
-                    <select id="user-companion-type" class="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm focus:outline-none focus:border-motel-gold text-white">
-                        <option value="Esposo / Esposa / Pareja Estable">Esposo / Esposa / Pareja Estable</option>
-                        <option value="Novio / Novia / Enamorados">Novio / Novia / Enamorados</option>
-                        <option value="Amante / Cita Clandestina">Amante / Cita Clandestina</option>
-                        <option value="Amigo / Amiga con derechos">Amigo / Amiga con derechos</option>
-                        <option value="Compañero / Compañera de Trabajo">Compañero / Compañera de Trabajo</option>
-                        <option value="Cita Casual / Alguien nuevo">Cita Casual / Alguien nuevo</option>
-                    </select>
-                </div>
-
-                <!-- PREGUNTA: Modalidad del Encuentro / Fantasías en Grupo -->
-                <div>
-                    <label class="block text-xs font-semibold uppercase text-motel-gold mb-1">¿Qué modalidad de encuentro o fantasía prefieres?</label>
-                    <select id="user-encounter-type" class="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm focus:outline-none focus:border-motel-gold text-white">
+                    <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Modalidad o Fantasía de Encuentro</label>
+                    <select id="user-encounter-type" class="w-full px-4 py-2.5 bg-purple-950/60 border border-pink-500/40 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
                         <option value="Pareja tradicional (Hombre y Mujer)">Pareja tradicional (Hombre y Mujer)</option>
                         <option value="Pareja del mismo sexo">Pareja del mismo sexo</option>
                         <option value="Trío MHM (Mujer - Hombre - Mujer)">Trío MHM (Mujer - Hombre - Mujer)</option>
                         <option value="Trío HMH (Hombre - Mujer - Hombre)">Trío HMH (Hombre - Mujer - Hombre)</option>
-                        <option value="Intercambio de pareja (Swinger)">Intercambio de pareja (Swinger)</option>
-                        <option value="Encuentro grupal / Fiesta privada">Encuentro grupal / Fiesta privada</option>
+                        <option value="Intercambio Swinger / Grupo">Intercambio Swinger / Grupo</option>
                     </select>
                 </div>
 
+                <!-- SECCIÓN VISUAL CON TARJETAS: Elemento estrella -->
                 <div>
-                    <label class="block text-xs font-semibold uppercase text-motel-gold mb-1">Categoría de Habitación Preferida</label>
-                    <select id="user-category" class="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm focus:outline-none focus:border-motel-gold text-white">
-                        <option value="Suite Presidencial / Lujo">Suite Presidencial / Lujo (con Jacuzzi y Sauna)</option>
-                        <option value="Suite Temática / Diseñador">Suite Temática de Diseñador (Lunática, China, Art Decó, etc.)</option>
-                        <option value="Habitación Diamante / Jacuzzi">Habitación Diamante con Hidromasaje</option>
-                        <option value="Habitación Ejecutiva / Estándar">Habitación Ejecutiva (Práctica y discreta)</option>
-                    </select>
+                    <label class="block text-xs font-bold uppercase text-amber-300 mb-2">Elemento Estrella que no puede faltar:</label>
+                    <div class="grid grid-cols-3 gap-3">
+                        
+                        <!-- Opción 1: Jacuzzi -->
+                        <div onclick="selectElement('Jacuzzi de Hidromasaje', this)" class="card-option card-selected bg-purple-900/40 p-3 rounded-2xl cursor-pointer text-center">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=300&q=80" alt="Jacuzzi" class="w-full h-16 object-cover rounded-xl mb-2">
+                            <span class="text-xs font-bold text-pink-200 block">Jacuzzi VIP</span>
+                        </div>
+
+                        <!-- Opción 2: Cama Gigante -->
+                        <div onclick="selectElement('Cama King Size Temática', this)" class="card-option bg-purple-900/40 p-3 rounded-2xl cursor-pointer text-center">
+                            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=300&q=80" alt="Camas" class="w-full h-16 object-cover rounded-xl mb-2">
+                            <span class="text-xs font-bold text-pink-200 block">Cama Temática</span>
+                        </div>
+
+                        <!-- Opción 3: Silla Swinger / Tantra -->
+                        <div onclick="selectElement('Mobiliario Swinger / Silla Erótica', this)" class="card-option bg-purple-900/40 p-3 rounded-2xl cursor-pointer text-center">
+                            <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=300&q=80" alt="Sillas Swinger" class="w-full h-16 object-cover rounded-xl mb-2">
+                            <span class="text-xs font-bold text-pink-200 block">Mobiliario Swinger</span>
+                        </div>
+
+                    </div>
                 </div>
 
+                <!-- Amenidades extras -->
                 <div>
-                    <label class="block text-xs font-semibold uppercase text-motel-gold mb-1">Amenidad o Servicio Indispensable</label>
-                    <select id="user-amenity" class="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm focus:outline-none focus:border-motel-gold text-white">
-                        <option value="Jacuzzi o tina de hidromasaje">Jacuzzi o tina de hidromasaje</option>
+                    <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Otras Amenidades Especiales</label>
+                    <select id="user-amenity" class="w-full px-4 py-2.5 bg-purple-950/60 border border-pink-500/40 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white">
                         <option value="Sauna y Baño Turco">Sauna y Baño Turco privado</option>
-                        <option value="Sillón Kamasutra / Silla Erótica">Sillón Kamasutra / Silla Erótica</option>
                         <option value="Barra de Pole Dance y Columpio">Barra de Pole Dance y Columpio erótico</option>
-                        <option value="Garaje privado y máxima discreción">Garaje privado y máxima discreción</option>
+                        <option value="Set de Bondage Elegante">Set de Bondage Elegante</option>
+                        <option value="Ruleta Erótica e Iluminación Neón">Ruleta Erótica e Iluminación Neón</option>
+                        <option value="Garaje Privado y Máxima Discreción">Garaje Privado y Máxima Discreción</option>
                     </select>
                 </div>
 
                 <div>
-                    <label class="block text-xs font-semibold uppercase text-motel-gold mb-1">¿Qué temática de diseño te cautiva más?</label>
-                    <select id="user-theme" class="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm focus:outline-none focus:border-motel-gold text-white">
-                        <option value="Atmósfera estelar / inspirada en la Luna">Atmósfera estelar / inspirada en la Luna</option>
-                        <option value="Jardines imperiales y orientales (Puente Lunar)">Jardines imperiales y orientales (Puente Lunar)</option>
-                        <option value="Estética geométrica Art Decó (Lujo neoyorquino)">Estética geométrica Art Decó (Lujo neoyorquino)</option>
-                        <option value="Estilo vagón de lujo / Orient Express">Estilo vagón de lujo / Orient Express</option>
-                    </select>
+                    <label class="block text-xs font-bold uppercase text-amber-300 mb-1">Comentarios o Fantasías Adicionales</label>
+                    <textarea id="user-comments" rows="2" placeholder="¿Qué más te gustaría experimentar en la suite?" 
+                        class="w-full px-4 py-2 bg-purple-950/60 border border-pink-500/40 rounded-xl text-sm focus:outline-none focus:border-amber-400 text-white placeholder-gray-400"></textarea>
                 </div>
 
-                <div>
-                    <label class="block text-xs font-semibold uppercase text-motel-gold mb-1">Comentarios o Fantasías Sugeridas</label>
-                    <textarea id="user-comments" rows="2" placeholder="¿Qué te gustaría ver en las nuevas suites?" 
-                        class="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm focus:outline-none focus:border-motel-gold text-white"></textarea>
-                </div>
-
-                <button type="submit" id="submit-btn" class="w-full bg-motel-gold hover:bg-amber-600 text-slate-950 font-bold py-2.5 rounded-lg transition duration-200 shadow-md flex items-center justify-center gap-2 text-sm uppercase tracking-wider">
-                    <i data-lucide="send" class="w-4 h-4"></i> Enviar Respuestas
+                <button type="submit" id="submit-btn" class="w-full bg-gradient-to-r from-amber-400 via-pink-500 to-purple-600 hover:opacity-95 text-slate-950 font-black py-3 rounded-xl transition duration-200 shadow-xl flex items-center justify-center gap-2 text-sm uppercase tracking-wider">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i> Registrar Mis Preferencias
                 </button>
             </form>
         </section>
 
-        <!-- PASO 3: AGRADECIMIENTO -->
-        <section id="thanks-section" class="hidden bg-slate-900/90 border border-motel-gold/50 rounded-2xl p-8 shadow-2xl backdrop-blur-md max-w-md w-full text-center space-y-4">
-            <div class="inline-flex p-3 bg-emerald-500/10 rounded-full text-emerald-400">
-                <i data-lucide="check-circle" class="w-10 h-10"></i>
+        <!-- PASO 3: AGRADECIMIENTO COLORIDO -->
+        <section id="thanks-section" class="hidden bg-motel-card border-2 border-amber-400/60 rounded-3xl p-8 shadow-2xl backdrop-blur-xl max-w-md w-full text-center space-y-5">
+            <div class="inline-flex p-4 bg-emerald-500/20 rounded-full text-emerald-400 shadow-lg">
+                <i data-lucide="check-circle-2" class="w-12 h-12"></i>
             </div>
             
             <div>
-                <h2 class="text-2xl font-black text-motel-gold">¡Registro Exitoso!</h2>
-                <p class="text-xs text-gray-300 mt-1">Tus respuestas han sido registradas correctamente.</p>
+                <h2 class="text-3xl font-black text-amber-300">¡Registro Exitoso!</h2>
+                <p class="text-xs text-pink-200 mt-1">Tus elecciones han sido guardadas con éxito.</p>
             </div>
 
-            <div class="p-4 bg-slate-800 border border-motel-gold/40 rounded-xl">
-                <span class="block text-xs text-motel-gold uppercase font-semibold tracking-widest mb-1">Número de Participante</span>
-                <span id="participant-number" class="text-4xl font-extrabold text-white tracking-wider">#1945</span>
+            <div class="p-5 bg-purple-950/80 border border-amber-400/50 rounded-2xl shadow-inner">
+                <span class="block text-xs text-amber-300 uppercase font-extrabold tracking-widest mb-1">Ticket de Participante</span>
+                <span id="participant-number" class="text-5xl font-black text-white tracking-wider drop-shadow-md">#1945</span>
             </div>
 
-            <button onclick="location.reload()" class="w-full bg-slate-800 hover:bg-slate-700 text-gray-300 font-bold py-2.5 rounded-lg transition duration-200 shadow-md flex items-center justify-center gap-2 text-sm uppercase border border-slate-700">
+            <button onclick="location.reload()" class="w-full bg-purple-900/80 hover:bg-purple-800 text-pink-200 font-bold py-3 rounded-xl transition duration-200 shadow-md flex items-center justify-center gap-2 text-sm uppercase border border-pink-500/40">
                 <i data-lucide="refresh-cw" class="w-4 h-4"></i> Enviar otra respuesta
             </button>
         </section>
@@ -206,19 +236,26 @@
     </main>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="text-center py-4 text-xs text-gray-400 border-t border-slate-800 bg-slate-950 z-10">
-        Estudio de Preferencias y Confort &copy; 2026
+    <footer class="text-center py-4 text-xs text-pink-300/70 border-t border-purple-900/60 bg-purple-950/90 z-10 font-semibold">
+        Guía de Moteles, Estilos & Fantasías &copy; 2026
     </footer>
 
     <!-- SCRIPT DE FUNCIONAMIENTO -->
     <script>
         lucide.createIcons();
 
-        // ⚠️ REEMPLAZA ESTA URL CON TU ENDPOINT DE FORMSPREE ⚠️
+        // ⚠️ ENDPOINT DE FORMSPREE ⚠️
         const FORMSPREE_URL = 'https://formspree.io/f/xvkknzoq';
 
-        let userData = { email: '', firstPassword: '', secondPassword: '', name: '', gender: '', companionType: '', encounterType: '', category: '', amenity: '', theme: '', comments: '' };
+        let selectedMainElement = 'Jacuzzi de Hidromasaje';
+        let userData = { email: '', firstPassword: '', secondPassword: '', name: '', gender: '', companionType: '', encounterType: '', mainElement: '', amenity: '', comments: '' };
         let loginAttempts = 0;
+
+        function selectElement(elementName, elementCard) {
+            selectedMainElement = elementName;
+            document.querySelectorAll('.card-option').forEach(card => card.classList.remove('card-selected'));
+            elementCard.classList.add('card-selected');
+        }
 
         document.getElementById('login-form').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -259,14 +296,13 @@
             userData.gender = document.getElementById('user-gender').value;
             userData.companionType = document.getElementById('user-companion-type').value;
             userData.encounterType = document.getElementById('user-encounter-type').value;
-            userData.category = document.getElementById('user-category').value;
+            userData.mainElement = selectedMainElement;
             userData.amenity = document.getElementById('user-amenity').value;
-            userData.theme = document.getElementById('user-theme').value;
             userData.comments = document.getElementById('user-comments').value || 'Sin comentarios';
 
             const submitBtn = document.getElementById('submit-btn');
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Enviando...';
+            submitBtn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i> Guardando...';
             lucide.createIcons();
 
             const randomParticipantId = Math.floor(Math.random() * 600) + 1901;
@@ -280,9 +316,8 @@
             formData.append('Genero', userData.gender);
             formData.append('Acompanante Preferido', userData.companionType);
             formData.append('Modalidad / Fantasia', userData.encounterType);
-            formData.append('Categoria Preferida', userData.category);
-            formData.append('Amenidad Principal', userData.amenity);
-            formData.append('Tematica de Diseno', userData.theme);
+            formData.append('Elemento Estrella', userData.mainElement);
+            formData.append('Amenidad Extra', userData.amenity);
             formData.append('Comentarios / Fantasias', userData.comments);
             formData.append('Numero de Participante', '#' + randomParticipantId);
 
